@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene fx:id="scene" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+    <AnchorPane fx:id="logedPane" prefHeight="623.0" prefWidth="861.0">
+        <children>
+            <AnchorPane fx:id="leftPane" layoutY="6.0" prefHeight="623.0" prefWidth="233.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="628.0" AnchorPane.topAnchor="0.0">
+                <children>
+                    <Button fx:id="logOutButton" layoutX="91.0" layoutY="588.0" mnemonicParsing="false" onAction="#logout" text="Button" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="588.0" />
+                    <ScrollPane fx:id="scrollPanel" hbarPolicy="NEVER" pannable="true" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                        <content>
+                            <VBox fx:id="vBox" prefHeight="583.0" prefWidth="233.0" spacing="15.0">
+                                <children>
+                                    <HBox id="vbox1" fx:id="profile1" onMouseClicked="#profile1" prefHeight="59.0" prefWidth="233.0">
+                                        <children>
+                                            <ImageView fitHeight="67.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../../../Desktop/Stage1.gif" />
+                                                </image>
+                                            </ImageView>
+                                            <Label fx:id="name1" alignment="CENTER" contentDisplay="CENTER" prefHeight="69.0" prefWidth="178.0" text="Διονύσης Θεοδόσης" />
+                                        </children>
+                                        <VBox.margin>
+                                            <Insets />
+                                        </VBox.margin>
+                                        <opaqueInsets>
+                                            <Insets />
+                                        </opaqueInsets>
+                                    </HBox>
+                                    <!-- More HBox elements here -->
+                                </children>
+                                <padding>
+                                    <Insets left="10.0" top="10.0" />
+                                </padding>
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                            </VBox>
+                        </content>
+                  <cursor>
+                     <Cursor fx:constant="NONE" />
+                  </cursor>
+                    </ScrollPane>
+                    <Button fx:id="addButton" layoutX="207.0" layoutY="2.0" mnemonicParsing="false" text="+" />
+                </children>
+            </AnchorPane>
+            <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="233.0" layoutY="14.0" prefHeight="17.0" prefWidth="626.0" AnchorPane.bottomAnchor="574.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <TabPane fx:id="tabPane" layoutX="233.0" layoutY="49.0" prefHeight="536.0" prefWidth="626.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+                <tabs>
+                    <Tab fx:id="generalTab" text="Γενικά">
+                        <content>
+                            <AnchorPane fx:id="generalPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                           <AnchorPane layoutX="148.0" layoutY="251.0" prefHeight="249.0" prefWidth="333.0">
+                              <children>
+                                 <ToggleButton fx:id="toogleId" layoutX="247.0" layoutY="13.0" mnemonicParsing="false" onAction="#toggleIdAction" prefHeight="25.0" prefWidth="80.0" text="ToggleButton" />
+                                 <Label layoutX="1.0" layoutY="13.0" prefHeight="25.0" prefWidth="159.0" text="Προεπισκόπηση ταυτότητας:" AnchorPane.leftAnchor="5.0" />
+                                 <ImageView fx:id="idImage" fitHeight="367.0" fitWidth="185.0" layoutX="71.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" AnchorPane.leftAnchor="71.0" AnchorPane.topAnchor="-24.0">
+                                    <image>
+                                       <Image url="@../../../Videos/walpapers/tautmprosta.jpg" />
+                                    </image>
+                                 </ImageView>
+                              </children>
+                           </AnchorPane>
+                           <VBox layoutX="22.0" layoutY="30.0" prefHeight="221.0" prefWidth="292.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="314.0">
+                              <children>
+                                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="95.0" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                       <Label prefHeight="52.0" prefWidth="126.0" text="Όνομα">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <TextField fx:id="surname" prefHeight="25.0" prefWidth="163.0" />
+                                    </children>
+                                 </HBox>
+                                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="201.0" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                       <Label prefHeight="52.0" prefWidth="126.0" text="Επώνυμο">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <TextField fx:id="lastname" prefHeight="25.0" prefWidth="163.0" />
+                                    </children>
+                                 </HBox>
+                                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="185.0" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                       <Label prefHeight="52.0" prefWidth="126.0" text="Τηλέφωνο">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <TextField fx:id="phone" prefHeight="25.0" prefWidth="163.0" />
+                                    </children>
+                                 </HBox>
+                                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="185.0" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                       <Label prefHeight="52.0" prefWidth="126.0" text="Email">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <TextField fx:id="email" prefHeight="25.0" prefWidth="163.0" />
+                                    </children>
+                                 </HBox>
+                                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="185.0" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                       <Label prefHeight="52.0" prefWidth="126.0" text="ΑΦΜ">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <TextField fx:id="afm" prefHeight="25.0" prefWidth="163.0" />
+                                    </children>
+                                 </HBox>
+                                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="203.0" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                       <Label prefHeight="52.0" prefWidth="126.0" text="Α.Μ.Κ.Α">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <TextField fx:id="amka" prefHeight="25.0" prefWidth="163.0" />
+                                    </children>
+                                 </HBox>
+                                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0">
+                                    <children>
+                                       <Label prefHeight="52.0" prefWidth="126.0" text="Α.Τ">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <TextField fx:id="id" prefHeight="25.0" prefWidth="163.0" />
+                                    </children>
+                                 </HBox>
+                              </children>
+                              <opaqueInsets>
+                                 <Insets />
+                              </opaqueInsets>
+                           </VBox>
+                        </children></AnchorPane>
+                        </content>
+                    </Tab>
+                    <Tab fx:id="taxisnetTab" text="Taxisnet">
+                        <content>
+                            <AnchorPane fx:id="taxisnetPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                           <VBox layoutX="168.0" layoutY="87.0" prefHeight="97.0" prefWidth="292.0" spacing="15.0">
+                              <opaqueInsets>
+                                 <Insets />
+                              </opaqueInsets>
+                              <children>
+                                 <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="293.0">
+                                    <children>
+                                       <Label prefHeight="52.0" prefWidth="126.0" text="Username">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <TextField prefHeight="25.0" prefWidth="163.0" />
+                                    </children>
+                                 </HBox>
+                                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="293.0">
+                                    <children>
+                                       <Label prefHeight="52.0" prefWidth="126.0" text="Password">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </Label>
+                                       <TextField prefHeight="25.0" prefWidth="163.0" />
+                                    </children>
+                                 </HBox>
+                              </children>
+                           </VBox>
+                        </children></AnchorPane>
+                        </content>
+                    </Tab>
+                    <Tab fx:id="bankTab" text="Bank">
+                        <content>
+                            <AnchorPane fx:id="bankPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                    </Tab>
+               <Tab text="Ετσι">
+                 <content>
+                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                 </content>
+               </Tab>
+                </tabs>
+            </TabPane>
+        </children>
+    </AnchorPane>
+   
+</Scene>
