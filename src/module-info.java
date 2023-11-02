@@ -1,4 +1,4 @@
-module TrustBox {
+module trustBox {
 	requires javafx.controls;
 	requires javafx.fxml;
 	requires javafx.graphics;
