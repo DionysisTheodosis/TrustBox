@@ -1,22 +1,20 @@
 package application;
 	
-import java.io.File;
 import java.net.URL;
-
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
 
-
-
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			File fxmlFile = new File("C:\\Users\\dionysis\\eclipse-workspace\\MyProject\\src\\app.fxml");
-            URL url = fxmlFile.toURI().toURL();
+			 URL url = getClass().getResource("/app.fxml");
+			    if (url == null) {
+			        throw new NullPointerException("FXML file not found in the classpath.");
+			    }
 
             FXMLLoader loader = new FXMLLoader(url);
             Scene scene = loader.load();
