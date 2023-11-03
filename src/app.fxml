@@ -23,7 +23,7 @@
 		<children>
 			<AnchorPane id="leftPane" fx:id="leftPane" layoutY="6.0" prefHeight="623.0" prefWidth="238.0" styleClass="left-pane" stylesheets="@application/application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="628.0" AnchorPane.topAnchor="0.0">
 				<children>
-					<ScrollPane id="scroll-pane" fx:id="scrollPanel" centerShape="false" fitToHeight="true" hbarPolicy="NEVER" hmax="0.0" pannable="true" prefHeight="479.0" prefWidth="348.0" scaleShape="false" stylesheets="@application/application.css" vbarPolicy="NEVER" vmax="5.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+					<ScrollPane id="scroll-pane" fx:id="scrollPanel" centerShape="false" fitToHeight="true" hbarPolicy="NEVER" hmax="0.0" pannable="true" prefHeight="479.0" prefWidth="233.0" scaleShape="false" stylesheets="@application/application.css" vmax="5.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="30.0">
 						<content>
 							<VBox fx:id="vBox" centerShape="false" pickOnBounds="true" prefHeight="402.0" prefWidth="234.0" scaleShape="false" spacing="15.0" styleClass="left-pane" stylesheets="@application/application.css">
 								<cursor>

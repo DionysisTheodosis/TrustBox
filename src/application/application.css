@@ -4,6 +4,9 @@
     -fx-border-color: transparent; /* Set the border color to transparent */
     -fx-background-color:#b4592a;
 }
+.scroll-pane :pressed {
+   -fx-cursor:closed-hand;
+}
 .loged-pane{
 	-fx-background-color: #2f2f2f;
 }
@@ -156,6 +159,22 @@
 #flip_id:pressed{
 	-fx-cursor:closed-hand;
 }
+/* Initially hide the vertical scrollbar */
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+    -fx-opacity: 0; /* Hide the scrollbar */
+}
 
-
-
+/* Show the scrollbar when the ScrollPane is hovered */
+.scroll-pane:hover .scroll-bar:vertical {
+    -fx-opacity: 1.0; /* Make the scrollbar visible */
+    -fx-padding: 0 0 0 0;
+    -fx-cursor:hand;
+}
+.scroll-pane .scroll-bar:vertical .thumb:pressed{
+   /* -fx-background-color: transparent;  Transparent thumb */
+    -fx-background-insets: 0; /* Remove padding */
+    -fx-background-radius: 0; /* Remove border radius */
+    -fx-cursor:closed-hand;
+}

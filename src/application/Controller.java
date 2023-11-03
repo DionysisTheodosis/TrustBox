@@ -174,8 +174,8 @@ public class Controller {
 	        assert taxisnetPane != null : "fx:id=\"taxisnetPane\" was not injected: check your FXML file 'app.fxml'.";
 	        assert taxisnetTab != null : "fx:id=\"taxisnetTab\" was not injected: check your FXML file 'app.fxml'.";
 	        assert vBox != null : "fx:id=\"vBox\" was not injected: check your FXML file 'app.fxml'.";
-		scrollPanel.setHmax(0); // Set horizontal maximum value to 0
-		scrollPanel.setHmin(0);
+//		scrollPanel.setHmax(0); // Set horizontal maximum value to 0
+//		scrollPanel.setHmin(0);
 		// cssStyleSheet = getClass().getResource("application.css").toExternalForm();
 
 		Image image1 = new Image(getClass().getResource("/resources/images/logoutS.png").toExternalForm());
