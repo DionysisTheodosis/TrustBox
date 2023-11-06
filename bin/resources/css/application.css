@@ -1,0 +1,184 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.scroll-pane {
+    -fx-border-width: 0.0; /* Set the border width to 0 */
+    -fx-border-color: transparent; /* Set the border color to transparent */
+    -fx-background-color:#b4592a;
+}
+.scroll-pane :pressed {
+   -fx-cursor:closed-hand;
+}
+.loged-pane{
+	-fx-background-color: #2f2f2f;
+}
+.left-pane{
+	-fx-background-color: #b4592a;
+}
+.text-label{
+	-fx-text-fill: #fff9f8
+	/* -fx-text-fill:  #FF7900*/
+}
+#tabPane .tab-header-background {
+    -fx-background-color: #4a4a4a;
+}
+#tabPane .tab-header-background:hover {
+    -fx-cursor: open-hand;
+}
+#tabPane .tab:hover{
+   -fx-cursor: hand;
+    -fx-background-color: derive(#b4592a, 40.0%);
+    
+   
+}
+#tabPane .tab:selected{
+   -fx-cursor: hand;
+    -fx-background-color: derive(#b4592a, 40.0%);
+}
+#tabPane .tab:pressed{
+   -fx-cursor: closed-hand;
+}
+#tabPane .tab {
+    -fx-background-color: #b4592a;
+    -fx-text-fill: #fff9f8;
+}
+.profile-pick{
+    -fx-background-image: url("file:/C:/Users/dionysis/Pictures/4.jpeg"); /* Set the path to your image */
+    -fx-background-size: cover; /* Adjust as needed */
+
+}
+/* Regular pointer cursor */
+.vBox {
+    -fx-cursor: hand;
+}
+
+/* Open hand cursor on hover */
+.vBox:hover {
+    -fx-cursor: open-hand;
+}
+
+/* Closed hand cursor when pressed */
+.vBox:pressed {
+    -fx-cursor: closed-hand;
+}
+.custom-button {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.0;
+    -fx-shape: "M 0 0 L 1 1 M 0 1 L 1 0";
+    -fx-stroke: white;
+    -fx-stroke-width: 2.0;
+    -fx-font-size: 18.0;
+    -fx-text-fill: white;
+}
+
+.custom-button:hover {
+    -fx-background-color: orange;
+}
+
+.custom-button:pressed {
+    -fx-stroke: orange;
+    -fx-text-fill: orange;
+}
+.save-button{
+	-fx-background-color:#b4592a;
+	-fx-font-size: 13.0;
+    -fx-text-fill: white;	
+}
+.save-button:hover {
+	-fx-cursor: hand;
+    -fx-background-color: derive(#b4592a, 20.0%); /* Make it 20% brighter */
+    -fx-effect: dropshadow(gaussian, orange, 10.0, 0.0, 0.0, 0.0);
+    -fx-text-fill: #4a4a4a;	
+}
+.save-button:pressed {
+    -fx-cursor: closed-hand;
+}
+#logOutButton:hover{
+	-fx-cursor: hand;
+    -fx-background-color: blue;
+    -fx-effect: dropshadow(three-pass-box, grey, 10.0, 0.5, 0.0, 0.0);
+}
+#logOutButton:pressed{
+ -fx-cursor: closed-hand;
+    -fx-background-color: blue;
+    -fx-effect: dropshadow(three-pass-box, red, 10.0, 0.5, 0.0, 0.0);
+}
+#exitButton {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.0;
+    -fx-shape: "M 0 0 L 1 1 M 0 1 L 1 0";
+    -fx-stroke: white;
+    -fx-stroke-width: 2.0;
+    -fx-font-size: 18.0;
+    -fx-text-fill: white;
+}
+#taxisNet {
+    
+    -fx-text-fill: white;
+}
+#general{
+    
+    -fx-text-fill: white;
+}
+
+#exitButton:hover {
+    -fx-background-color: orange;
+}
+
+#minimizeButton:pressed {
+    -fx-stroke: orange;
+    -fx-text-fill: orange;
+}
+#minimizeButton {
+    -fx-background-color: transparent;
+    -fx-border-width: 0.0;
+    -fx-shape: "M 0 0 L 1 1 M 0 1 L 1 0";
+    -fx-stroke: white;
+    -fx-stroke-width: 2.0;
+    -fx-font-size: 18.0;
+    -fx-text-fill: white;
+}
+
+#minimizeButton:hover {
+    -fx-background-color: orange;
+}
+
+#minimizeButton:pressed {
+    -fx-stroke: orange;
+    -fx-text-fill: orange;
+}
+
+#newUserButton:hover {
+	-fx-cursor: hand;
+    -fx-background-color: blue;
+    -fx-effect: dropshadow(three-pass-box, grey, 10.0, 0.5, 0.0, 0.0);
+}
+#newUserButton:pressed{
+	-fx-cursor:closed-hand;
+}
+
+#flip_id:hover {
+	-fx-cursor: hand;
+    -fx-background-color: blue;
+    -fx-effect: dropshadow(three-pass-box, orange, 10.0, 0.5, 0.0, 0.0);
+}
+#flip_id:pressed{
+	-fx-cursor:closed-hand;
+}
+/* Initially hide the vertical scrollbar */
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 0 0;
+    -fx-opacity: 0; /* Hide the scrollbar */
+}
+
+/* Show the scrollbar when the ScrollPane is hovered */
+.scroll-pane:hover .scroll-bar:vertical {
+    -fx-opacity: 1.0; /* Make the scrollbar visible */
+    -fx-padding: 0 0 0 0;
+    -fx-cursor:hand;
+}
+.scroll-pane .scroll-bar:vertical .thumb:pressed{
+   /* -fx-background-color: transparent;  Transparent thumb */
+    -fx-background-insets: 0; /* Remove padding */
+    -fx-background-radius: 0; /* Remove border radius */
+    -fx-cursor:closed-hand;
+}
